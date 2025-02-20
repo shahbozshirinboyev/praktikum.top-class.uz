@@ -12,7 +12,7 @@ function SignUp() {
       <div className='w-full h-screen p-8 lg:p-12 2xl:p-24 flex justify-center items-center bg-[#042e1c]'>
         <div className='border-0 h-[700px] w-[900px] bg-white rounded-3xl flex justify-center items-center box-border p-4 gap-4'>
 
-        <div className={`w-[50%] hidden md:inline-block  h-full border bg-[url("/img/bg/sign_in_bg.webp")] rounded-3xl bg-cover bg-center`}>
+        <div className={`w-[50%] hidden md:inline-block  h-full border bg-[url("/img/bg/sign_up_bg.webp")] rounded-3xl bg-cover bg-center`}>
 
 </div>
 
