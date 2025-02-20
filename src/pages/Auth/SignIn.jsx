@@ -1,7 +1,17 @@
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 
 function SignIn() {
   const navigate = useNavigate();
+  const { login } = useAuth();
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    // Simulate user login
+    login();
+    // Redirect to RootLayout
+    navigate('/');
+  };
 
   const handleSignUpRedirect = () => {
     navigate('/signup');
@@ -14,7 +24,7 @@ function SignIn() {
 
           <div className='w-[50%] h-full flex flex-col justify-center items-center'>
             <h4 className='text-center text-3xl font-bold py-8'>Sign in</h4>
-            <p className='text-[12px] font-medium'>Please enter yout details.</p>
+            <p className='text-[12px] font-medium'>Please enter your details.</p>
 
             <button className='btn btn-wide mt-4 font-medium rounded-full flex justify-center items-center'>
               <i className="bi bi-google flex justify-center items-center"></i>
@@ -27,19 +37,19 @@ function SignIn() {
               <hr className='border w-[100px] rounded-full' />
             </div>
 
-            <form action="" className='flex flex-col gap-2'>
+            <form onSubmit={handleSignIn} className='flex flex-col gap-2'>
               <label className="rounded-full border flex items-center gap-2 px-4 py-3 w-full">
                 <input type="text" className="grow outline-none" placeholder="+998 94 362 64 35" />
-                <i class="bi bi-telephone  opacity-70"></i>
+                <i className="bi bi-telephone opacity-70"></i>
               </label>
               <label className="rounded-full border flex items-center gap-2 px-4 py-3 w-full">
                 <input type="password" className="grow outline-none" placeholder="Password" />
-                <i class="bi bi-eye  opacity-70"></i>
+                <i className="bi bi-eye opacity-70"></i>
               </label>
               <div className='text-[12px] text-slate-400 flex justify-end'>
                 <button className='font-normal'>Forgot password?</button>
               </div>
-              <button className='btn btn-wide mt-4 font-medium rounded-full flex justify-center items-center'>
+              <button type="submit" className='btn btn-wide mt-4 font-medium rounded-full flex justify-center items-center'>
                 Sign in
               </button>
               <div className='text-[12px] flex justify-center items-center gap-1 pt-3'>

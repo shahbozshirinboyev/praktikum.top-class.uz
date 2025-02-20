@@ -6,17 +6,25 @@ import RootLayout from "./layouts/RootLayout";
 import ErrorPage from "./pages/Error/ErrorPage";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
+import HomePage from "./pages/Home/HomePage.jsx";
+import Courses from "./pages/Courses/Courses.jsx";
 
 function App() {
   const routes = createBrowserRouter([
     {
       path: '/',
-      element: (
-        <ProtectedRoute>
-          <RootLayout />
-        </ProtectedRoute>
-      ),
+      element: ( <ProtectedRoute> <RootLayout /> </ProtectedRoute> ),
       errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />
+        },
+        {
+          path: '/courses',
+          element: <Courses />
+        }
+    ]
     },
     { path: '/signin', element: <SignIn /> },
     { path: '/signup', element: <SignUp /> },
