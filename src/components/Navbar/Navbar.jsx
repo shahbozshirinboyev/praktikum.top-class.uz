@@ -1,23 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="navbar bg-base-100 border-b p-3">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">
-          {/* <img src="/img/icon/logo-b.png" alt="Logo" className="w-32" /> */}
+        {/* <a className="btn btn-ghost text-xl">
+          <img src="/img/icon/logo-b.png" alt="Logo" className="w-32" />
+          <span>Top-Class</span>
+        </a> */}
+        <NavLink to="/" className="btn btn-ghost text-xl">
           Top-Class
-        </a>
+        </NavLink>
       </div>
 
       <div className="flex-none gap-2">
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 ">
+          <ul className="menu menu-horizontal px-1 gap-2">
             <li>
-              <a>Home</a>
+              {/* <a>Home</a> */}
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a>Courses</a>
+              {/* <a>Courses</a> */}
+              <NavLink to="/courses">Courses</NavLink>
             </li>
           </ul>
         </div>
