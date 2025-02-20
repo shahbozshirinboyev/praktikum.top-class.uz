@@ -9,6 +9,8 @@ import SignUp from "./pages/Auth/SignUp";
 import HomePage from "./pages/Home/HomePage.jsx";
 import Courses from "./pages/Courses/Courses.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
+import MyInfo from "./pages/Profile/MyInfo/MyInfo.jsx";
+import MyExperience from "./pages/Profile/MyExperience/MyExperience.jsx";
 
 function App() {
   const routes = createBrowserRouter([
@@ -27,7 +29,17 @@ function App() {
         },
         {
           path: '/profile',
-          element: <Profile />
+          element: <Profile />,
+          children: [
+            {
+              index: true,
+              element: <MyInfo />
+            },
+            {
+              path: '/profile/experience',
+              element: <MyExperience />
+            }
+          ]
         }
     ]
     },

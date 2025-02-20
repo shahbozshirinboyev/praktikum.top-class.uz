@@ -77,19 +77,19 @@ function Navbar() {
           >
             <li>
               <a>
-                <i class="bi bi-house"></i>
+                <i className="bi bi-house"></i>
                 <span>Back to site</span>
               </a>
             </li>
             <li>
               <NavLink to="/profile">
-                <i class="bi bi-person-gear"></i>
+                <i className="bi bi-person-gear"></i>
                 <span>Profile information</span>
               </NavLink>
             </li>
             <li>
               <a>
-                <i class="bi bi-box-arrow-left"></i>
+                <i className="bi bi-box-arrow-left"></i>
                 <span>Logout</span>
               </a>
             </li>
