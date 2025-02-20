@@ -8,6 +8,7 @@ import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import HomePage from "./pages/Home/HomePage.jsx";
 import Courses from "./pages/Courses/Courses.jsx";
+import Profile from "./pages/Profile/Profile.jsx";
 
 function App() {
   const routes = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: '/courses',
           element: <Courses />
+        },
+        {
+          path: '/profile',
+          element: <Profile />
         }
     ]
     },

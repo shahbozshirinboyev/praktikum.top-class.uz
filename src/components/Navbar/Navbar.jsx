@@ -73,7 +73,7 @@ function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-14 w-52 p-2 shadow-md border"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-14 w-52 p-2 gap-1 shadow-md border"
           >
             <li>
               <a>
@@ -82,10 +82,10 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a>
+              <NavLink to="/profile">
                 <i class="bi bi-person-gear"></i>
                 <span>Profile information</span>
-              </a>
+              </NavLink>
             </li>
             <li>
               <a>
