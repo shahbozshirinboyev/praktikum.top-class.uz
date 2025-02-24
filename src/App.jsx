@@ -11,6 +11,9 @@ import Courses from "./pages/Courses/Courses.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
 import MyInfo from "./pages/Profile/MyInfo/MyInfo.jsx";
 import MyExperience from "./pages/Profile/MyExperience/MyExperience.jsx";
+import MyCertificate from "./pages/Profile/MyCertificate/MyCertificate.jsx";
+import PaymentHistory from "./pages/Profile/PaymentHistory/PaymentHistory.jsx";
+import MyDevices from "./pages/Profile/MyDevices/MyDevices.jsx";
 
 function App() {
   const routes = createBrowserRouter([
@@ -38,6 +41,18 @@ function App() {
             {
               path: '/profile/experience',
               element: <MyExperience />
+            },
+            {
+              path: '/profile/certificate',
+              element: <MyCertificate />
+            },
+            {
+              path: '/profile/paymenthistory',
+              element: <PaymentHistory/>
+            },
+            {
+              path: '/profile/mydevices',
+              element: <MyDevices />
             }
           ]
         }

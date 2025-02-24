@@ -21,22 +21,22 @@ function Profile() {
               </NavLink>
             </li>
             <li>
-              <button className='btn w-full flex justify-start'>
+              <NavLink to='/profile/certificate' className='btn w-full flex justify-start'>
                 <i className="bi bi-patch-check text-xl"></i>
                 <span>My certificates</span>
-              </button>
+              </NavLink>
             </li>
             <li>
-              <button className='btn w-full flex justify-start'>
+              <NavLink to='/profile/paymenthistory' className='btn w-full flex justify-start'>
                 <i className="bi bi-clock-history text-xl"></i>
                 <span>Payment history</span>
-              </button>
+              </NavLink>
             </li>
             <li>
-              <button className='btn w-full flex justify-start'>
+              <NavLink to='/profile/mydevices' className='btn w-full flex justify-start'>
                 <i className="bi bi-tv text-xl"></i>
                 <span>My devices</span>
-              </button>
+              </NavLink>
             </li>
           </ul>
         </div>
