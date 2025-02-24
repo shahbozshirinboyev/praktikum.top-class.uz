@@ -8,40 +8,33 @@ function Profile() {
 
         <div className='w-72 p-3 bg-white rounded-lg'>
           <ul className='flex flex-col gap-3'>
-            <li>
-              <NavLink to='/profile' className='btn w-full flex justify-start'>
-                <i className="bi bi-person-circle text-xl"></i>
-                <span>My information</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/profile/experience' className='btn w-full flex justify-start'>
-                <i className="bi bi-briefcase text-xl"></i>
-                <span>My experiences</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/profile/certificate' className='btn w-full flex justify-start'>
-                <i className="bi bi-patch-check text-xl"></i>
-                <span>My certificates</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/profile/paymenthistory' className='btn w-full flex justify-start'>
-                <i className="bi bi-clock-history text-xl"></i>
-                <span>Payment history</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/profile/mydevices' className='btn w-full flex justify-start'>
-                <i className="bi bi-tv text-xl"></i>
-                <span>My devices</span>
-              </NavLink>
-            </li>
+            {[
+              { to: '/profile', icon: 'bi-person-circle', label: 'My information' },
+              { to: '/profile/experience', icon: 'bi-briefcase', label: 'My experiences' },
+              { to: '/profile/certificate', icon: 'bi-patch-check', label: 'My certificates' },
+              { to: '/profile/paymenthistory', icon: 'bi-clock-history', label: 'Payment history' },
+              { to: '/profile/mydevices', icon: 'bi-tv', label: 'My devices' }
+            ].map(({ to, icon, label }) => (
+              <li key={to}>
+                <NavLink
+                  to={to}
+                  className={({ isActive }) =>
+                    `btn w-full flex justify-start items-center gap-2 px-3 py-2 rounded-lg ${
+                      isActive ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800'
+                    }`
+                  }
+                >
+                  <i className={`bi ${icon} text-xl`}></i>
+                  <span>{label}</span>
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
-        <Outlet />
+        <div className='flex-1 p-4 bg-white rounded-lg'>
+          <Outlet />
+        </div>
 
       </section>
     </div>
