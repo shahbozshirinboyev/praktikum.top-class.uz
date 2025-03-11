@@ -1,5 +1,4 @@
-import React from 'react'
-import { Outlet, NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from "react-router-dom"
 
 function Profile() {
   return (
@@ -32,7 +31,7 @@ function Profile() {
           </ul>
         </div>
 
-        <div className='flex-1 p-4 bg-white rounded-lg'>
+        <div className='flex-1 rounded-lg'>
           <Outlet />
         </div>
 
